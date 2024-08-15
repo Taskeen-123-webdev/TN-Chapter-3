@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TN-Visit Tracker</title>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+    <p id="visitCount"></p> 
+
+    <script>
+       
+        if (localStorage.getItem('visitCount')) {
+        
+            var visitCount = parseInt(localStorage.getItem('visitCount'), 10);
+            visitCount++;
+        } else {
+            
+            var visitCount = 1;
+        }
+
+        
+        localStorage.setItem('visitCount', visitCount);
+
+       
+        alert("You have visited this site " + visitCount + " times.");
+    </script>
+</body>
+</html>
